@@ -73,7 +73,7 @@ const Home = () => {
           <div className={styles.valuesContainer}>
             <div className={styles.valuesGrid}>
               <div className={styles.valuesLeft}>
-                {/* 此处为左侧留白 */}
+                <img src="/img/values.png" alt="办学理念" />
               </div>
               <div className={styles.valuesRight}>
                 <div className={styles.sectionHeader}>
@@ -87,7 +87,7 @@ const Home = () => {
                 <div className={styles.valueItem}>
                   <h3 className={styles.valueTitle}>时代痛点: AI浪潮下的教育与就业鸿沟</h3>
                   <p className={styles.valueDescription}>当前AI加速产业变革,传统教育却课程陈旧、实践脱节。</p>
-                  <p className={styles.valueDescription}>4年大学,让千万学子陷入"毕业即失业"困境,例如2025届高校毕业生1222万人创新高,但毕业后,一大部分学子考研,一大部分学子考公,一大部分人报培训班继续学习。</p>
+                  <p className={styles.valueDescription}>4年大学,让千万学子陷入"毕业即失业"困境,例如2025届高校毕业生<span className={styles.highlightText}>1222万</span>人创新高,但毕业后,一大部分学子考研,一大部分学子考公,一大部分人报培训班继续学习。</p>
                   <p className={styles.valueDescription}>企业招不到人,毕业生找不到工作。</p>
                 </div>
               </div>

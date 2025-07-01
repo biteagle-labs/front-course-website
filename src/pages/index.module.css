@@ -164,7 +164,7 @@
 
 /* valuesSection: Special padding and background */
 .valuesSection {
-  background-color: var(--color-off-white);
+  /* background-color: var(--color-off-white); */
 }
 
 /* programsSection: Specific background */
@@ -321,20 +321,37 @@
 
 .valuesGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* 平分两栏 */
-  width: 100%;
+  grid-template-columns: 1fr 1.2fr;
+  /* 调整左右比例 */
+  gap: var(--spacing-3xl);
   align-items: center;
-  gap: var(--spacing-4xl);
+  width: 100%;
 }
 
 .valuesLeft {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.valuesLeft img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.valuesLeft img:hover {
+  transform: scale(1.05);
 }
 
 .valuesRight .sectionHeader {
   text-align: left;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .valuesRight .sectionTitle {
@@ -414,9 +431,14 @@
   margin-top: var(--spacing-sm);
 }
 
+.highlightText {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
 .valueList {
-  list-style: none;
-  padding: 0;
+  list-style-type: none;
+  padding-left: 0;
   margin: 0;
   font-size: var(--font-size-base);
   color: var(--text-secondary);
@@ -940,11 +962,12 @@
 
   .valuesGrid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-2xl);
   }
 
   .valuesLeft {
     display: none;
+    /* 在移动端隐藏图片 */
   }
 
   .aboutGrid {
