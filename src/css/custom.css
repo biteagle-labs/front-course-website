@@ -131,3 +131,27 @@ body {
 .fade-in {
   animation: fadeIn 0.6s ease-out;
 }
+
+/* Loading Spinner */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--ifm-color-primary-light);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

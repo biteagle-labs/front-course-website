@@ -1,6 +1,7 @@
 import React from 'react';
 import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './index.module.css';
 
@@ -122,7 +123,7 @@ const Home = () => {
               <p className={styles.sectionSubtitle}>Academic Programs</p>
             </div>
             <div className={styles.programsGrid}>
-              <div className={styles.programCard}>
+              {/* <div className={styles.programCard}>
                 <div className={styles.programContent}>
                   <h3>Web3编程课</h3>
                   <p>学习区块链开发、智能合约和DeFi，成为Web3核心技术人才。</p>
@@ -132,19 +133,21 @@ const Home = () => {
                     <span>DeFi</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div className={styles.programCard}>
-                <div className={styles.programContent}>
-                  <h3>Web3市场营销课</h3>
-                  <p>掌握Web3营销策略，包括社区、内容和NFT营销，成为数字营销专家。</p>
-                  <div className={styles.programSkills}>
-                    <span>社区运营</span>
-                    <span>内容营销</span>
-                    <span>NFT营销</span>
+              <Link to="/docs/web3-operation/learning-manual/intro" className={styles.programCardLink}>
+                <div className={styles.programCard}>
+                  <div className={styles.programContent}>
+                    <h3>Web3市场营销课</h3>
+                    <p>掌握Web3营销策略，包括社区、内容和NFT营销，成为数字营销专家。</p>
+                    <div className={styles.programSkills}>
+                      <span>社区运营</span>
+                      <span>内容营销</span>
+                      <span>NFT营销</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             <div className={styles.programNote}>

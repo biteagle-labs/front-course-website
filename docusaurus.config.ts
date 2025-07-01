@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: '比特鹰社会大学',
+  title: '社会大学',
   tagline: '实践为王，成长为本，助力高薪就业！',
   favicon: 'img/favicon.ico',
 
@@ -56,7 +56,7 @@ const config: Config = {
         {
           label: '学校首页',
           position: 'right',
-          href: '/#home',
+          to: '/#home',
         },
         // {
         //   label: 'Web3编程课',
@@ -66,7 +66,7 @@ const config: Config = {
         {
           label: 'Web3市场营销课',
           position: 'right',
-          href: '/docs/web3-operation/learning-manual/intro',
+          to: '/docs/web3-operation/learning-manual/intro',
         },
       ],
     },
