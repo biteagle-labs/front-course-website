@@ -1,0 +1,133 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* 主题颜色变量定义 */
+:root {
+  /* 主色调 - 校徽紫色 */
+  --ifm-color-primary: #7B1FA2;
+  --ifm-color-primary-dark: #6A1B9A;
+  --ifm-color-primary-darker: #4A148C;
+  --ifm-color-primary-darkest: #311B58;
+  --ifm-color-primary-light: #8E24AA;
+  --ifm-color-primary-lighter: #9C27B0;
+  --ifm-color-primary-lightest: #BA68C8;
+
+  /* 其他 */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-bold: 700;
+}
+
+/* 深色主题 */
+[data-theme='dark'] {
+  --ifm-color-primary: #BA68C8;
+  --ifm-color-primary-dark: #9C27B0;
+  --ifm-color-primary-darker: #8E24AA;
+  --ifm-color-primary-darkest: #6A1B9A;
+  --ifm-color-primary-light: #CE93D8;
+  --ifm-color-primary-lighter: #E1BEE7;
+  --ifm-color-primary-lightest: #F3E5F5;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* 主题切换动画 */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 全局字体优化 */
+html {
+  font-family: var(--ifm-font-family-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ifm-font-family-base);
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+[data-theme='dark'] body {
+  color: #f9fafb;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.0);
+  z-index: 1000;
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(31, 41, 55, 0.0);
+}
+
+/* 主题切换按钮样式 */
+.clean-btn {
+  border-radius: 0.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.clean-btn:hover {
+  background: rgba(37, 99, 235, 0.1) !important;
+  transform: scale(1.05) !important;
+}
+
+[data-theme='dark'] .clean-btn:hover {
+  background: rgba(96, 165, 250, 0.1) !important;
+}
+
+/* 页面背景 */
+.main {
+  background:
+    radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), transparent),
+    radial-gradient(ellipse 80% 80% at 50% 120%, rgba(120, 119, 198, 0.3), transparent);
+}
+
+/* 深色主题下的页面背景 */
+[data-theme='dark'] .main {
+  background:
+    radial-gradient(ellipse 80% 80% at 50% -20%, rgba(186, 104, 200, 0.2), transparent),
+    radial-gradient(ellipse 80% 80% at 50% 120%, rgba(30, 32, 40, 0.9), #1e2028);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}

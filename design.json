@@ -1,0 +1,222 @@
+{
+    "designSystem": {
+      "name": "Eduvi 课程设计系统",
+      "version": "1.0.0",
+      "description": "一个为在线学习平台打造的设计系统，具有简洁、现代和友好的界面。此数据从提供的截图中提取，可用于Cursor等代码生成工具。",
+      "tokens": {
+        "colors": {
+          "primary": {
+            "main": "#8C52FF",
+            "description": "主品牌色，用于按钮、活动链接和高亮部分。"
+          },
+          "secondary": {
+            "main": "#FF6652",
+            "description": "强调色，用于活动标签页和重要标签。"
+          },
+          "accent": {
+            "teal": "#32D4A4",
+            "yellow": "#FFC443",
+            "orange": "#FF942E",
+            "description": "辅助色，用于如图标之类的分类元素。"
+          },
+          "text": {
+            "primary": "#1E0A44",
+            "secondary": "#545454",
+            "onDark": "#FFFFFF",
+            "disabled": "#A0A0A0",
+            "description": "文本颜色，用于标题、正文以及彩色背景上的文本。"
+          },
+          "background": {
+            "dark": "#1E0A44",
+            "default": "#FAF7FF",
+            "paper": "#FFFFFF",
+            "description": "不同区域的背景色：深色主视觉区、浅色区块和内容卡片。"
+          },
+          "ui": {
+            "border": "#EAEAEA",
+            "divider": "#F0F0F0",
+            "description": "中性色，用于边框和分割线。"
+          }
+        },
+        "typography": {
+          "fontFamily": "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+          "h1": {
+            "fontSize": "48px",
+            "fontWeight": 700,
+            "lineHeight": "1.2"
+          },
+          "h2": {
+            "fontSize": "40px",
+            "fontWeight": 700,
+            "lineHeight": "1.25"
+          },
+          "h3": {
+            "fontSize": "24px",
+            "fontWeight": 600,
+            "lineHeight": "1.3"
+          },
+          "h4": {
+            "fontSize": "20px",
+            "fontWeight": 600,
+            "lineHeight": "1.4"
+          },
+          "body1": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "lineHeight": "1.6"
+          },
+          "body2": {
+            "fontSize": "14px",
+            "fontWeight": 400,
+            "lineHeight": "1.5"
+          },
+          "button": {
+            "fontSize": "16px",
+            "fontWeight": 500,
+            "lineHeight": "1",
+            "textTransform": "none"
+          },
+          "label": {
+            "fontSize": "14px",
+            "fontWeight": 500,
+            "lineHeight": "1"
+          }
+        },
+        "spacing": {
+          "xs": "4px",
+          "sm": "8px",
+          "md": "16px",
+          "lg": "24px",
+          "xl": "32px",
+          "xxl": "48px",
+          "description": "基于4px的尺寸体系，用于实现一致的外边距和内边距。"
+        },
+        "shape": {
+          "borderRadiusSmall": "4px",
+          "borderRadiusMedium": "8px",
+          "borderRadiusLarge": "12px",
+          "borderRadiusPill": "50px",
+          "description": "边框圆角值，用于从直角到全圆角的各种形状。"
+        },
+        "shadows": {
+          "soft": "0px 4px 12px rgba(30, 10, 68, 0.05)",
+          "medium": "0px 8px 24px rgba(30, 10, 68, 0.1)",
+          "description": "精细的阴影，用于为卡片和悬浮元素创造深度感。"
+        }
+      },
+      "components": {
+        "button": {
+          "description": "定义不同按钮变体的样式。",
+          "baseStyle": {
+            "fontFamily": "typography.fontFamily",
+            "fontSize": "typography.button.fontSize",
+            "fontWeight": "typography.button.fontWeight",
+            "borderRadius": "shape.borderRadiusPill",
+            "padding": "12px 24px",
+            "border": "1px solid transparent",
+            "transition": "all 0.3s ease"
+          },
+          "variants": {
+            "primary": {
+              "backgroundColor": "colors.primary.main",
+              "color": "colors.text.onDark",
+              "description": "主要的号召性动作按钮，例如“搜索”或“立即联系”。"
+            },
+            "secondary": {
+              "backgroundColor": "colors.background.paper",
+              "color": "colors.text.secondary",
+              "borderColor": "colors.ui.border",
+              "description": "线框按钮，用于次要操作，例如“课程详情”。"
+            },
+            "secondaryActive": {
+              "backgroundColor": "colors.primary.main",
+              "color": "colors.text.onDark",
+              "borderColor": "colors.primary.main",
+              "description": "次要按钮的激活/悬停状态，如“Standard Three”卡片上所示。"
+            }
+          }
+        },
+        "card": {
+          "description": "内容容器（如课程卡片或个人资料卡片）的基础样式。",
+          "baseStyle": {
+            "backgroundColor": "colors.background.paper",
+            "borderRadius": "shape.borderRadiusLarge",
+            "padding": "spacing.lg",
+            "boxShadow": "shadows.soft",
+            "border": "1px solid colors.ui.border"
+          }
+        },
+        "tabs": {
+          "description": "用于内容筛选的导航选项卡的样式。",
+          "container": {
+            "display": "flex",
+            "gap": "spacing.md"
+          },
+          "tab": {
+            "baseStyle": {
+              "padding": "8px 16px",
+              "borderRadius": "shape.borderRadiusPill",
+              "fontSize": "typography.body2.fontSize",
+              "fontWeight": 500,
+              "cursor": "pointer",
+              "transition": "all 0.3s ease"
+            },
+            "inactive": {
+              "backgroundColor": "colors.background.paper",
+              "color": "colors.text.secondary",
+              "border": "1px solid colors.ui.border"
+            },
+            "active": {
+              "backgroundColor": "colors.secondary.main",
+              "color": "colors.text.onDark",
+              "border": "1px solid colors.secondary.main"
+            }
+          }
+        },
+        "header": {
+          "description": "网站主导航栏的样式。",
+          "baseStyle": {
+            "height": "80px",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "space-between",
+            "padding": "0 spacing.xl",
+            "backgroundColor": "colors.background.paper",
+            "borderBottom": "1px solid colors.ui.border"
+          },
+          "navLink": {
+            "color": "colors.text.secondary",
+            "fontWeight": 500,
+            "padding": "spacing.sm spacing.md",
+            "hover": {
+              "color": "colors.primary.main"
+            }
+          }
+        },
+        "searchBar": {
+          "description": "主视觉区的搜索输入框组件。",
+          "baseStyle": {
+            "display": "flex",
+            "alignItems": "center",
+            "backgroundColor": "colors.background.paper",
+            "borderRadius": "shape.borderRadiusMedium",
+            "padding": "spacing.sm",
+            "maxWidth": "500px"
+          },
+          "input": {
+            "border": "none",
+            "outline": "none",
+            "flexGrow": 1,
+            "padding": "0 spacing.md",
+            "backgroundColor": "transparent"
+          },
+          "dropdown": {
+            "color": "colors.text.primary",
+            "fontWeight": 500,
+            "borderRight": "1px solid colors.ui.divider",
+            "paddingRight": "spacing.md"
+          }
+        }
+      }
+    }
+  }
