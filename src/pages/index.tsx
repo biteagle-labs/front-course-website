@@ -49,7 +49,7 @@ export const sections = [
 
 const Home = () => {
   return (
-    <Layout title="比特鹰社会大学 - 实践为王，成长为本">
+    <Layout title="社会大学 - 实践为王，成长为本">
       <main className={styles.main}>
         {/* 英雄区域 */}
         <section id="hero" className={styles.heroSection}>
